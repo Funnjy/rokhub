@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
+import Navigation from './components/Navigation';
+import Content from './components/Content';
+import './style.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+    return (
+        <div className="container__row row justify-content-center" id="container">
+            <Navigation />
+            <Content accessToken={props.accessToken} />
+        </div>
+    );
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        accessToken: state.user.accessToken
+    }
+}
+
+export default connect(mapStateToProps, null)(App);
