@@ -9,7 +9,7 @@ import { Link } from "../Router"
  * @returns {Object}
  */
 export default function AllianceMembersCard(props) {
-    if(!props.alliance.members?.length) return <div className="alert error">Нет участников</div>;
+    if(!props.alliance?.members?.length) return <div className="alert error">Нет участников</div>;
 
     return (
         <div className="alliance-members">
