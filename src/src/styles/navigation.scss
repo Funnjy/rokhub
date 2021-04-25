@@ -1,0 +1,28 @@
+.navigation {
+    padding: .7rem 0 0 0;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color:#3546df48;
+    &__logotype {
+
+    }
+    &__group {
+        display: flex;
+        flex-direction: column;
+        &-title {
+            font-weight: 700;
+            padding-left: 0.5rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    }
+    &__link {
+        padding: .5rem 1rem;
+        text-decoration: none;
+        color: #000000;
+        background-color: #fffbed;
+        border-left: none;
+        border-right: none;
+    }
+}
