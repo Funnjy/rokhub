@@ -4,7 +4,6 @@ import { AsyncResponse } from '../components/generic/AsyncResponse';
 /**
  * Wrapper for component.
  * Shows response message from server.
- * if need clear the async response pass on the property clearAsyncResponseReducer.
  * 
  * @param {Object} Component 
  * @returns {Object}
